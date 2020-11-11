@@ -1,25 +1,7 @@
-:root {
-  --app-height: 700px;
-  --app-width: 600px;
-  --menu-height: 100px;
-}
-
-* {
-  margin: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-html, body {
-  background: green;
+body {
   height: 100vh;
-  width: 100vw;
-}
-
-#container {
-  width: 100vw;
-  height: 100vh;
-  background: #333;
+  width: 100vb;
+  background: black;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -31,95 +13,25 @@ html, body {
           justify-content: center;
 }
 
-#application {
-  width: var(--app-width);
-  height: var(--app-height);
-  border: 1px solid pink;
-}
-
-#menu {
-  height: var(--menu-height);
-  width: 100%;
-  background-color: #1b5f1b;
-}
-
-#menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  position: relative;
-}
-
-#menu .menuItem {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 60px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-#menu #scoreDiv {
-  font-size: 1.6rem;
-  color: white;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-left: 15px;
-}
-
-#menu #scoreDiv img {
-  height: 50px;
-}
-
-#menu #best-score {
-  font-size: 1.6rem;
-  color: white;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-left: 100px;
-}
-
-#menu #best-score img {
-  height: 50px;
-}
-
-#menu #controls {
-  position: absolute;
-  right: 25px;
-}
-
-#menu #controls img {
-  height: 30px;
-}
-
-#gameBoard {
-  width: 100%;
-  background-color: lightgreen;
-  height: calc( 100% - var(--menu-height));
-  border: 50px solid #3d813d;
+#game-board {
+  height: 80vmin;
+  width: 80vmin;
+  background-color: yellow;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[17];
-      grid-template-columns: repeat(17, 1fr);
+  -ms-grid-columns: (1fr)[21];
+      grid-template-columns: repeat(21, 1fr);
+  -ms-grid-rows: (1fr)[21];
+      grid-template-rows: repeat(21, 1fr);
 }
 
-#gameBoard .evenCell {
-  background: #1b5f1b;
+.food {
+  background-color: pink;
+  border: 0.5vmin solid black;
 }
 
-#gameBoard .oddCell {
-  background: #1e4121;
+.snake {
+  background-color: blue;
+  border: 0.5vmin solid black;
 }
 /*# sourceMappingURL=style.css.map */
