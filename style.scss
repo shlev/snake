@@ -1,81 +1,22 @@
-:root {
-    --app-height: 700px;
-    --app-width: 600px;
-    --menu-height: 100px;
+body { height: 100vh; width: 100vb; background: black;
+    display: flex; align-items: center; justify-content: center;
 }
 
-* { margin: 0; box-sizing: border-box; }
-html, body { background: green; height: 100vh; width: 100vw;}
-
-#container {
-    width: 100vw;
-    height: 100vh;
-    background: #333;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#application {
-    width: var(--app-width);
-    height: var(--app-height);
-    border: 1px solid pink;
-}
-
-#menu {
-    height: var(--menu-height);
-    width: 100%;
-    background-color: rgb(27, 95, 27);
-}
-
-#menu {
-    display: flex;
-    align-items: center;
-    position: relative;
-
-    .menuItem { display: flex; width: 60px; justify-content:space-between;}
-    #scoreDiv { 
-        font-size: 1.6rem;
-        color: white;
-        display: flex;
-        align-items: center;
-        margin-left: 15px; 
-        img { height: 50px;}
-    }
-    #best-score { 
-        font-size: 1.6rem;
-        color: white;
-        display: flex;
-        align-items: center;
-        margin-left: 100px;
-        img { height: 50px;}}
-    #controls { position: absolute; right: 25px;
-        img { height: 30px;}
-    }
-}
-
-
-#gameBoard {
-    width: 100%;
-    background-color: lightgreen;
-    height: calc( 100% - var(--menu-height));
-    border: 50px solid rgb(61, 129, 61);
+#game-board {
+    height: 80vmin;
+    width: 80vmin;
+    background-color: yellow;
     display: grid;
-    grid-template-columns: repeat(17, 1fr);
-
-    .cell {
-
-    }
-
-    .evenCell {
-        background: rgb(27, 95, 27);
-    }
-
-    .oddCell {
-        background: rgb(30, 65, 33);
-    }
+    grid-template-columns: repeat(21, 1fr);
+    grid-template-rows: repeat(21, 1fr);
 }
 
+.food {
+    background-color: pink;
+    border: 0.5vmin solid black;
+}
 
-
-
+.snake {
+    background-color: blue;
+    border: 0.5vmin solid black;
+}
